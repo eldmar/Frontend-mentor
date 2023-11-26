@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card-component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="hero">
+      <section class="hero__content">
+        <div class="hero__container">
+          <h1 class="hero__title">
+            Get <span>insights</span> that help your business grow.
+          </h1>
+          <p class="hero__text">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="hero__items">
+            <div class="data-item">
+              <p class="number">10k+</p>
+              <p class="categories">Companies</p>
+            </div>
+            <div class="data-item">
+              <p class="number">314</p>
+              <p class="categories">Templates</p>
+            </div>
+            <div class="data-item">
+              <p class="number">12M+</p>
+              <p class="categories">Queries</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero__img">
+        <img
+          srcset="
+            ./images/image-header-mobile.jpg  654w,
+            ./images/image-header-desktop.jpg 540w
+          "
+          sizes="(max-width: 900px) 654px,
+       (min-width: 901px) 540px"
+          src="./images/image-header-desktop.jpg"
+          alt="people"
+        />
+        <div class="hero__mask"></div>
+      </section>
+    </main>
+  </body>
+</html>

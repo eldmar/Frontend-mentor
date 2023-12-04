@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-orange: #e28625;
+  --clr-green: #006971;
+  --clr-dark-green: #004140;
+  --clr-bg: #f2f2f2;
+  --ff-main: "Lexend Deca", sans-serif;
+  --ff-bold: "Big Shoulders Display", sans-serif;
+}
+button {
+  border: none;
+}
+body {
+  font-family: var(--ff-main);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  background-color: var(--clr-bg);
+  color: var(--clr-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  max-width: 920px;
+  display: flex;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.hero__col {
+  max-width: 307px;
+}
+.sedan {
+  background-color: var(--clr-orange);
+}
+.suvs {
+  background-color: var(--clr-green);
+}
+.luxury {
+  background-color: var(--clr-dark-green);
+}
+.hero__wrap {
+  padding: 48px;
+}
+.hero__img {
+  padding-bottom: 35px;
+}
+.hero__title {
+  font-size: 2.5rem;
+  font-family: var(--ff-bold);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 25px;
+}
+.hero__text {
+  line-height: 1.66;
+  opacity: 0.75;
+  padding-bottom: 83px;
+}
+.hero__btn {
+  width: 146px;
+  height: 48px;
+  border-radius: 25px;
+  font-family: var(--ff-main);
+  background-color: var(--clr-bg);
+  font-size: 0.9375rem;
+  transition: background-color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+  cursor: pointer;
+}
+.hero__btn:is(:hover, :focus) {
+  background-color: transparent;
+  border: 2px solid #f2f2f2;
+  color: var(--clr-bg);
+}
+.sedan__btn {
+  color: var(--clr-orange);
+}
+.suvs__btn {
+  color: var(--clr-green);
+}
+.luxury__btn {
+  color: var(--clr-dark-green);
+}
+
+@media screen and (max-width: 793px) {
+  .hero {
+    margin: 88px 24px;
+    flex-direction: column;
+    height: 100%;
+    min-width: 327px;
+  }
+  .hero__col {
+    max-width: none;
+  }
+}

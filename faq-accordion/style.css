@@ -1,0 +1,137 @@
+:root {
+  --clr-bg: #f8eeff;
+  --clr-bg-2: #fff;
+  --clr-primary: #301534;
+  --clr-secondary: #8b6990;
+  --clr-hover: #ad28eb;
+
+  --ff-main: "Work Sans", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-main);
+  font-size: 1.125rem;
+  color: var(--clr-primary);
+  min-height: 100vh;
+  background-image: url(./images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  background-color: var(--clr-bg);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+  max-width: 600px;
+  min-width: 250px;
+  width: 100%;
+  background-color: var(--clr-bg-2);
+  box-shadow: 0px 32px 56px 0px rgba(80, 0, 118, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.hero__header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  & h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Accordion  */
+
+label {
+  display: block;
+}
+input[type="checkbox"],
+.hero__active-block {
+  display: none;
+}
+input[type="checkbox"]:checked ~ .hero__active-block {
+  display: block;
+}
+.hero__accordion {
+  margin-top: 36px;
+  width: 100%;
+}
+.hero__block {
+  padding-bottom: 28px;
+  padding-top: 28px;
+}
+.hero__block:not(:last-child) {
+  border-bottom: 1px solid var(--clr-bg);
+}
+.hero__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--clr-primary);
+  font-weight: var(--fw-semi-bold);
+  max-width: 520px;
+  width: 100%;
+  transition: color 0.2s ease-in;
+  cursor: pointer;
+}
+
+.hero__question::after {
+  flex-shrink: 0;
+  display: block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(./images/icon-plus.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-left: 20px;
+}
+input[type="checkbox"]:checked + .hero__question::after {
+  background-image: url(./images/icon-minus.svg);
+}
+
+.hero__question:is(:hover, :focus) {
+  color: var(--clr-hover);
+}
+
+.hero__active-block {
+  padding-top: 28px;
+
+  & p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: var(--fw-regular);
+    color: var(--clr-secondary);
+  }
+}
+
+@media screen and (max-width: 565px) {
+  body {
+    background-image: url(./images/background-pattern-mobile.svg);
+  }
+  .hero {
+    padding: 20px;
+    margin: 0 24px;
+  }
+  .hero__question {
+    font-size: 1rem;
+  }
+  .hero__active-block p {
+    font-size: 0.875rem;
+  }
+}

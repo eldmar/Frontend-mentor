@@ -59,7 +59,7 @@ body {
   max-width: 27.8125rem;
   & h1 {
     color: var(--clr-block);
-    font-size: clamp(2.5rem, 2.2947rem + 1.0044vw, 3.5rem);
+    font-size: 3.5rem;
     font-weight: var(--fw-bold);
     line-height: 3rem;
     letter-spacing: -2px;
@@ -177,6 +177,9 @@ body {
 
     align-items: center;
     text-align: center;
+  }
+   .hero__text h1 {
+    font-size: 40px;
   }
   .hero__reviews {
     align-items: center;
